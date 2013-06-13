@@ -13,6 +13,7 @@
 
   $.fn.glid = function( options ) {
 
+    // Set som default params
     var settings      = {
 
       //transition parameters
@@ -23,6 +24,7 @@
 
     };
 
+    // If the user has set her own options they will be appended to the default ones
     if ( options ) {
       $.extend( defaults, options );
     }
@@ -34,6 +36,7 @@
         ctrl_next     = null,
         ctrl_prev     = null;
 
+    // Variables relating to the state of Glid
     var state         = {
 
       slidecount      : slides.length - 1, // Index is zero-based, let's make slidecount compatible
@@ -56,10 +59,12 @@
 
     var init_controls = function () {
 
+      // Setup the controllers
       ctrl_wrapper  = $('<ul class="glid-controls"></ul>');
       ctrl_prev     = $('<li class="glid-controls__item"><a href="#" data-direction="prev">Previous</a></li>');
       ctrl_next     = $('<li class="glid-controls__item"><a href="#" data-direction="next">Next</a></li>');
 
+      // Bind controller click event
       ctrl_wrapper.on('click', 'a', function(e) {
 
         e.preventDefault();
@@ -69,6 +74,7 @@
 
       });
 
+      // Add controllers to DOM
       ctrl_prev.appendTo( ctrl_wrapper );
       ctrl_next.appendTo( ctrl_wrapper );
       ctrl_wrapper.insertAfter( slider );
