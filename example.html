@@ -2,9 +2,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Untitled Document</title>
+        <title>Glid.js - a tiny jQuery slider plugin</title>
+        <style>
+        	body {
+        		width: 100%;
+        	}
+
+        	.wrapper {
+        		max-width: 800px;
+        		margin: 0 auto;
+        		text-align: center;
+        	}
+
+        	.glid {
+        		margin: 0;
+        		padding: 0;
+        		list-style: none;
+        	}
+					.glid__item {
+						display: none;
+					}
+
+					.glid__item.active {
+						display: block;
+					}
+        </style>
     </head>
-    
     <body>
+			<div class="wrapper">
+				<ul class="glid" id="glid">
+					<li class="glid__item active">
+						<img src="http://placekitten.com/g/200/300" alt="Cute kitten" />
+					</li>
+					<li class="glid__item">
+						<img src="http://placekitten.com/g/300/300" alt="Cute kitten" />
+					</li>
+					<li class="glid__item">
+						<img src="http://placekitten.com/g/250/200" alt="Cute kitten" />
+					</li>
+				</ul>
+			</div>
+
+    	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    	<script src="jquery.glid.js"></script>
+			<script>
+			$('#glid').glid();
+			</script>
     </body>
 </html>
