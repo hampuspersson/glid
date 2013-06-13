@@ -1,0 +1,8 @@
+{
+  "name": "Glid.js",
+  "version": "1.0",
+  "main": "./jquery.glid.js",
+  "dependencies": {
+    "jquery": ">= 1.6"
+  }
+}
