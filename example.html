@@ -8,40 +8,33 @@
         		width: 100%;
         	}
 
-        	.wrapper {
-        		max-width: 800px;
-        		margin: 0 auto;
-        		text-align: center;
-        	}
-
         	.glid {
         		margin: 0;
         		padding: 0;
+        		position: relative;
         		list-style: none;
         	}
 					.glid__item {
+						position: absolute;
 						display: none;
 					}
-
-					.glid__item.active {
-						display: block;
+					.glid-controls {
+						position: relative;
 					}
         </style>
     </head>
     <body>
-			<div class="wrapper">
-				<ul class="glid" id="glid">
-					<li class="glid__item active">
-						<img src="http://placekitten.com/g/200/300" alt="Cute kitten" />
-					</li>
-					<li class="glid__item">
-						<img src="http://placekitten.com/g/300/300" alt="Cute kitten" />
-					</li>
-					<li class="glid__item">
-						<img src="http://placekitten.com/g/250/200" alt="Cute kitten" />
-					</li>
-				</ul>
-			</div>
+			<ul class="glid" id="glid">
+				<li>
+					<img src="http://placekitten.com/g/200/300" alt="Cute kitten" />
+				</li>
+				<li>
+					<img src="http://placekitten.com/g/300/300" alt="Cute kitten" />
+				</li>
+				<li>
+					<img src="http://placekitten.com/g/250/200" alt="Cute kitten" />
+				</li>
+			</ul>
 
     	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     	<script src="jquery.glid.js"></script>
