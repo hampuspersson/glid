@@ -49,9 +49,10 @@
     var init = function() {
 
       // Add classes to all items that are to be a part of the slider
+      slider.wrap('<div class="glid_wrapper">');
       slides.addClass('glid__item');
       // Show the first item in the slider
-      slides.eq(state.currentindex).show();
+      slides.eq(state.currentindex).fadeIn(settings.animduration);
 
       // Setup timer to assure that the first image is loaded before the controls are loaded.
       // Height must be set so that the controls can be positionend below
@@ -61,7 +62,7 @@
           slider.height( slides.eq(state.nextindex).height() );
           init_controls();
         }
-      }, 200);
+      }, 100);
     };
 
     var init_controls = function () {
@@ -70,8 +71,6 @@
       ctrl_wrapper  = $('<ul class="glid-controls"></ul>');
       ctrl_prev     = $('<li class="glid-controls__item"><a href="#" data-direction="prev">Previous</a></li>');
       ctrl_next     = $('<li class="glid-controls__item"><a href="#" data-direction="next">Next</a></li>');
-
-      slider.wrap('<div class="glid_wrapper">');
 
       // Bind controller click event
       ctrl_wrapper.on('click', 'a', function(e) {
@@ -113,7 +112,11 @@
         // Hide current slide and display next
         slides.eq(state.currentindex).fadeOut(settings.animduration);
         slides.eq(state.nextindex).fadeIn(settings.animduration);
-        slider.height( slides.eq(state.nextindex).height() );
+
+        // Animate the height change of the slider to make sure the controls are moved
+        slider.animate( {
+          height: slides.eq(state.nextindex).height()
+        });
 
         // Reset states for next animation
         state.currentindex  = state.nextindex;
