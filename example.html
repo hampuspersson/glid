@@ -8,6 +8,9 @@
         		width: 100%;
         	}
 
+					.glid_wrapper {
+						text-align: center;
+					}
         	.glid {
         		margin: 0;
         		padding: 0;
@@ -21,25 +24,33 @@
 					.glid-controls {
 						position: relative;
 					}
+					.glid-controls li {
+						list-style: none;
+						display: inline-block;
+						margin-right: 1em;
+					}
         </style>
     </head>
     <body>
 			<ul class="glid" id="glid">
 				<li>
 					<img src="http://placekitten.com/g/200/300" alt="Cute kitten" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipi*scing elit. Nunc in purus eni*m, eget posuere urna. Donec pharetra mollis enim, et vehicula ante ornare ut. Pellentesque hendrerit consectetur eros ut posuere. Praesent risus mauris, venenatis volutpat pellentesque interdum, auctor a ante. </p>
 				</li>
 				<li>
 					<img src="http://placekitten.com/g/300/300" alt="Cute kitten" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipi*scing elit. Nunc in purus eni*m, eget posuere urna. Donec pharetra mollis enim, et vehicula ante ornare ut. Pellentesque hendrerit consectetur eros ut posuere. Praesent risus mauris, venenatis volutpat pellentesque interdum, auctor a ante. </p>
 				</li>
 				<li>
 					<img src="http://placekitten.com/g/250/200" alt="Cute kitten" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipi*scing elit. Nunc in purus eni*m, eget posuere urna. Donec pharetra mollis enim, et vehicula ante ornare ut. Pellentesque hendrerit consectetur eros ut posuere. Praesent risus mauris, venenatis volutpat pellentesque interdum, auctor a ante. </p>
 				</li>
 			</ul>
 
     	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     	<script src="jquery.glid.js"></script>
-			<script>
-			$('#glid').glid();
-			</script>
+	<script>
+	$('#glid').glid();
+	</script>
     </body>
 </html>
