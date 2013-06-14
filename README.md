@@ -30,7 +30,7 @@ Include jQuery and Glid
 <script src="jquery.glid.js"></script>
 ```
 
-And finally call for Glid to set up your <ul>.
+And finally call for Glid to set up your `<ul>`.
 
 ```html
 <script>
